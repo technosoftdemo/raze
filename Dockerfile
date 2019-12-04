@@ -16,13 +16,14 @@ WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 
 COPY package.json /app/package.json
-RUN npm install
-RUN npm install -g @angular/cli@7.3.9
+#RUN npm install
+#RUN npm install -g @angular/cli@7.3.9
 
 COPY . .
-RUN npm install
-RUN npm run postinstall && \
-    npm run build
+RUN ls
+#RUN npm install
+#RUN npm run postinstall && \
+#    npm run build
 
 #Stage 2
 FROM nginx:alpine
@@ -34,6 +35,7 @@ COPY nginx/default.conf /etc/nginx/conf.d/
 RUN rm -rf /usr/share/nginx/html/*
 ## From ‘builder’ stage copy over the artifacts in dist folder to default nginx public folder
 COPY --from=builder /app/dist/* /usr/share/nginx/html/
+#RUN cp -a /app/dist/* /usr/share/nginx/html/
 #EXPOSE 80
 
 #Run NGINX
