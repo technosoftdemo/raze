@@ -4,11 +4,12 @@
 declare var apiConfig: any;
 export const environment = {
   production: false,
-  apiUrl: 'https://apigw-titandev1.nextsphere.com',
+  apiUrl: 'http://13.234.5.9:8080',
   //uiTemplateBaseUrl: document.getElementsByTagName('base')[0].href + '/resources/static/src/assets',
   baseHref: document.getElementsByTagName('base')[0].href,
   encryptionKey:'',
-  cdnURL:''
+  cdnURL:'',
+  apiGatewayUrl:'http://13.234.5.9:8080/'
 };
 
 /*
