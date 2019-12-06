@@ -24,7 +24,6 @@ export class HeaderComponent implements OnInit {
     }
 
     setImagePath(): void {
-        debugger;
         this.logoPath = (environment.production === true ? 'img/logo.png' : 'assets/img/logo.png');
     }
 }
