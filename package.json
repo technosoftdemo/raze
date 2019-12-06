@@ -7,7 +7,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "clean": "npm cache clean --force",
-    "start": "http-server -c-1 -p 8081 dist",
+    "start": "ng build --prod --build-optimizer --vendor-chunk=true && http-server-spa dist/ index.html 8080",
     "build": "ng build --prod --build-optimizer --vendor-chunk=true",
     "cibuild": "ng test --watch=false --code-coverage && ng build --prod --no-progress",
     "postinstall": "node patch.js"
