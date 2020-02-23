@@ -9,7 +9,8 @@ export const environment = {
   baseHref: document.getElementsByTagName('base')[0].href,
   encryptionKey:'',
   cdnURL:'',
-  apiGatewayUrl:'http://13.234.5.9:8080/'
+  //apiGatewayUrl:'http://13.234.5.9:8080/'
+  apiGatewayUrl:'https://rdted.technosoftcorp.net/api/'
 };
 
 /*
