@@ -4,7 +4,7 @@
 declare var apiConfig: any;
 export const environment = {
   production: false,
-  apiUrl: 'http://13.234.5.9:8080',
+  apiUrl: 'https://rdted.technosoftcorp.net/api/',
   //uiTemplateBaseUrl: document.getElementsByTagName('base')[0].href + '/resources/static/src/assets',
   baseHref: document.getElementsByTagName('base')[0].href,
   encryptionKey:'',
